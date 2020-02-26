@@ -1,0 +1,220 @@
+Assignment 6 readme File
+
+------------------------------------------------------------------------
+Student 1: What is your name?
+
+Isaac Wolfe
+
+------------------------------------------------------------------------
+Student 2: What is your name?
+
+Isaac Hart
+
+------------------------------------------------------------------------
+Student 1: What authorized sources of information did you use to
+complete the assignment? COPY THE LIST of authorized sources of
+information given in the "Policies" web page to this section of the
+readme file, and edit it as appropriate.
+
+The course's lectures.
+
+The course's precepts.
+
+The course's website.
+
+Documents that are referenced directly by the course's website. Such
+documents include the course's lecture slides and precept handouts.
+
+The course's textbooks.
+
+The man pages on the armlab cluster.
+
+Office Hours on Monday and Thursday.
+
+------------------------------------------------------------------------
+Student 2: What authorized sources of information did you use to
+complete the assignment? COPY THE LIST of authorized sources of
+information given in the "Policies" web page to this section of the
+readme file, and edit it as appropriate.
+
+The course's lectures.
+
+The course's precepts.
+
+The course's website.
+
+Documents that are referenced directly by the course's website. Such
+documents include the course's lecture slides and precept handouts.
+
+The course's textbooks.
+
+The man pages on the armlab cluster.
+
+Office Hours on Monday and Thursday.
+
+
+------------------------------------------------------------------------
+Student 1: What unauthorized sources of information did you use to
+complete the assignment? List any unauthorized sources of information
+that you used to complete the assignment, and describe how you used
+them. The course "Policies" web page defines unauthorized sources of
+information, and any source that you have used but not listed in the
+authorized sources should be included here. Please note that using an
+unauthorized source may trigger a course penalty, and depending on the
+nature of the interaction, may additionally require the interaction
+being reported to the Committee on Discipline. Write "None" if you used
+no unauthorized sources of information.
+
+None.
+
+------------------------------------------------------------------------
+Student 2: What unauthorized sources of information did you use to
+complete the assignment? List any unauthorized sources of information
+that you used to complete the assignment, and describe how you used
+them. The course "Policies" web page defines unauthorized sources of
+information, and any source that you have used but not listed in the
+authorized sources should be included here. Please note that using an
+unauthorized source may trigger a course penalty, and depending on the
+nature of the interaction, may additionally require the interaction
+being reported to the Committee on Discipline. Write "None" if you used
+no unauthorized sources of information.
+
+None.
+
+------------------------------------------------------------------------
+Student 1: What is your assessment of the assignment? Was it helpful?
+Was it fun?
+
+Not fun, but fairly helpful in learning about memory management.
+
+------------------------------------------------------------------------
+Student 2: What is your assessment of the assignment? Was it helpful?
+Was it fun?
+
+It was fairlt enjoyable, but a little tedious, especially in 
+debugging.
+
+------------------------------------------------------------------------
+(optional) What information can you provide about your submission that
+will help your grader to grade it in the most favorable light? In
+particular, what bugs are in your submission?
+
+We did no create the most modular code (there are no functions 
+for inserting or coalescing chunks), but we found this more spelled
+out variation to be a lot easier to comprehend and code. If we had 
+time, we would modularize, but alas we do not.
+
+------------------------------------------------------------------------
+What warnings does splint generate on
+testheapmgr.c/heapmgr4.c/checker4.c/chunk4.c, and what are your
+disagreements with them? Copy the splint warnings here, and express your
+disagreement after each warning. If there are no warnings, then write
+"None."
+
+ None.
+
+------------------------------------------------------------------------
+What warnings does critTer generate on checker4.c, and what are your
+disagreements with them? Copy the critTer warnings here, and express
+your disagreement after each warning. If there are no warnings, then
+write "None."
+
+   checker4.c: line 112: low priority: 
+   A function should consist of fewer than 140 lines;
+   this function consists of 142 lines; consider refactoring
+
+   checker4.c: line 112: low priority: 
+   This function definition probably needs more local comments
+
+   We feel checker4 is properly commented and the nature of the 
+   function necessitates a long function (it's really only 2
+   lines over the limit).
+
+------------------------------------------------------------------------
+What warnings does critTer generate on heapmgr4.c, and what are your
+disagreements with them? Copy the critTer warnings here, and express
+your disagreement after each warning. If there are no warnings, then
+write "None."
+
+None.
+
+------------------------------------------------------------------------
+What warnings does splint generate on
+testheapmgr.c/heapmgr5.c/checker5.c/chunk5.c, and what are your
+disagreements with them? Copy the splint warnings here, and express your
+disagreement after each warning. If there are no warnings, then write
+"None."
+
+None.
+
+------------------------------------------------------------------------
+What warnings does critTer generate on checker5.c, and what are your
+disagreements with them? Copy the critTer warnings here, and express
+your disagreement after each warning. If there are no warnings, then
+write "None."
+
+   checker5.c: line 46: medium priority:
+   Do you want to validate 'bins' through an assert?
+
+   (And other like it)
+
+   The bins array does not require validation because it is 
+   virtually stagnant.
+
+    checker5.c: line 68: low priority: 
+   This area is deeply nested at level 4, consider refactoring
+
+   The logic of our understanding of the checker requires this
+   level of nesting. It could be simplified, but it would require
+   some fragmentation of logic that would make it less clear to 
+   the reader.
+
+------------------------------------------------------------------------
+What warnings does critTer generate on heapmgr5.c, and what are your
+disagreements with them? Copy the critTer warnings here, and express
+your disagreement after each warning. If there are no warnings, then
+write "None."
+
+None.
+
+------------------------------------------------------------------------
+What are the CPU times and heap memory consumed by testheapmgr using
+heapmgr1.c, heapmgr2.c, heapmgr3.c, heapmgr4.c, and heapmgr5.c, with
+tests RandomRandom and Worst, with call count 100000, and with maximum
+chunk sizes 2000 and 20000? COPY THE OUTPUT OF THE TESTHEAP SCRIPT HERE.
+You will lose points if you provide the data in any format that differs
+from the output of the testheap script.
+
+      Executable         Test   Count   Size   Time        Mem
+===============================================================
+         ./test1 RandomRandom  100000   2000   0.13  100395136
+         ./test1        Worst  100000   2000   0.09  101600000
+---------------------------------------------------------------
+         ./test1 RandomRandom  100000  20000   0.14 1001833136
+         ./test1        Worst  100000  20000   0.08 1001600000
+===============================================================
+         ./test2 RandomRandom  100000   2000   0.08  100401152
+         ./test2        Worst  100000   2000   0.01  101605376
+---------------------------------------------------------------
+         ./test2 RandomRandom  100000  20000   0.13 1001833136
+         ./test2        Worst  100000  20000   0.05 1001600000
+===============================================================
+         ./test3 RandomRandom  100000   2000  12.34   18882560
+         ./test3        Worst  100000   2000  21.62   55803904
+---------------------------------------------------------------
+         ./test3 RandomRandom  100000  20000  23.10  183345504
+         ./test3        Worst  100000  20000  30.05  525465344
+===============================================================
+         ./test4 RandomRandom  100000   2000   0.40   22487040
+         ./test4        Worst  100000   2000  39.37   54419456
+---------------------------------------------------------------
+         ./test4 RandomRandom  100000  20000   2.25  218522528
+         ./test4        Worst  100000  20000  43.01  504410368
+===============================================================
+         ./test5 RandomRandom  100000   2000   0.13   17825792
+         ./test5        Worst  100000   2000   0.15   54419456
+---------------------------------------------------------------
+         ./test5 RandomRandom  100000  20000   0.18  180754144
+         ./test5        Worst  100000  20000   1.80  504410368
+
+------------------------------------------------------------------------
